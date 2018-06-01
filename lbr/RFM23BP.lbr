@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -96,32 +97,29 @@
 </packages>
 <symbols>
 <symbol name="RFM23BP">
-<wire x1="-7.62" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-<text x="-5.08" y="2.54" size="1.778" layer="94">RFM23BP</text>
-<text x="-5.08" y="0" size="1.016" layer="94">433/868/915MHz</text>
-<pin name="GND3" x="2.54" y="-12.7" visible="pad" length="middle" direction="pwr" rot="R90"/>
-<pin name="GND2" x="0" y="-12.7" visible="pad" length="middle" direction="pwr" rot="R90"/>
-<pin name="GND1" x="-2.54" y="-12.7" visible="pad" length="middle" direction="pwr" rot="R90"/>
-<pin name="VCC" x="0" y="15.24" visible="pad" length="middle" direction="pwr" rot="R270"/>
-<pin name="SDO" x="-12.7" y="7.62" visible="pad" length="middle"/>
-<pin name="SDI" x="-12.7" y="5.08" visible="pad" length="middle"/>
-<pin name="SCK" x="-12.7" y="2.54" visible="pad" length="middle"/>
-<pin name="NSEL" x="-12.7" y="0" visible="pad" length="middle"/>
-<pin name="NIRQ" x="-12.7" y="-2.54" visible="pad" length="middle"/>
-<pin name="SDN" x="-12.7" y="-5.08" visible="pad" length="middle"/>
-<pin name="GPIO_2" x="12.7" y="7.62" visible="pad" length="middle" rot="R180"/>
-<pin name="ANT" x="12.7" y="-5.08" visible="pad" length="middle" rot="R180"/>
-<pin name="GPIO_1" x="12.7" y="5.08" visible="pad" length="middle" rot="R180"/>
-<pin name="GPIO_0" x="12.7" y="2.54" visible="pad" length="middle" rot="R180"/>
-<pin name="RXON" x="12.7" y="0" visible="pad" length="middle" rot="R180"/>
-<pin name="TXON" x="12.7" y="-2.54" visible="pad" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-12.7" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-12.7" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<pin name="VCC" x="-12.7" y="7.62" length="middle" direction="pwr"/>
+<pin name="SDO" x="-12.7" y="2.54" length="middle"/>
+<pin name="SDI" x="-12.7" y="0" length="middle"/>
+<pin name="SCK" x="-12.7" y="-2.54" length="middle"/>
+<pin name="NSEL" x="-12.7" y="-5.08" length="middle"/>
+<pin name="NIRQ" x="-12.7" y="-7.62" length="middle"/>
+<pin name="SDN" x="-12.7" y="-10.16" length="middle"/>
+<pin name="GPIO_2" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="ANT" x="17.78" y="-5.08" length="middle" rot="R180"/>
+<pin name="GPIO_1" x="17.78" y="5.08" length="middle" rot="R180"/>
+<pin name="GPIO_0" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="RXON" x="17.78" y="0" length="middle" rot="R180"/>
+<pin name="TXON" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<pin name="GND" x="17.78" y="-10.16" length="middle" rot="R180"/>
+<text x="-7.62" y="10.16" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="RFM23BP">
+<deviceset name="RFM23BP" prefix="U">
 <description>&lt;b&gt;HopeRF RFM23BP&lt;/b&gt;
 &lt;br&gt;&lt;br&gt;
 Library by: &lt;a href="http://projects.weber-itam.de"&gt;http://projects.weber-itam.de&lt;/a&gt;</description>
@@ -132,9 +130,7 @@ Library by: &lt;a href="http://projects.weber-itam.de"&gt;http://projects.weber-
 <device name="" package="RFM23BP">
 <connects>
 <connect gate="G$1" pin="ANT" pad="ANT"/>
-<connect gate="G$1" pin="GND1" pad="GND1"/>
-<connect gate="G$1" pin="GND2" pad="GND2"/>
-<connect gate="G$1" pin="GND3" pad="GND3"/>
+<connect gate="G$1" pin="GND" pad="GND1 GND2 GND3"/>
 <connect gate="G$1" pin="GPIO_0" pad="GPIO_0"/>
 <connect gate="G$1" pin="GPIO_1" pad="GPIO_1"/>
 <connect gate="G$1" pin="GPIO_2" pad="GPIO_2"/>
