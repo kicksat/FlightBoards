@@ -2,7 +2,7 @@
 
 CubeSat Flight Computer for KickSat-2
 
-![](https://github.com/kicksat/mainboard/blob/master/cam/KMB-21.png "KickSat2 Motherboard")
+![](https://github.com/kicksat/mainboard/blob/master/cam/KMB-21.png =250x "KickSat2 Motherboard")
 
 
 
