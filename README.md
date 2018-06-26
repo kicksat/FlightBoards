@@ -2,7 +2,7 @@
 
 CubeSat Flight Computer for KickSat-2
 
-![](https://github.com/kicksat/mainboard/blob/master/cam/KMB-21.png){:height="50%" width="50%"}
+![](https://github.com/kicksat/mainboard/blob/master/cam/KMB-21.png){:width="10%"}
 
 
 
