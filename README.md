@@ -1,6 +1,6 @@
 # mainboard
 
-Main PCB driving the Kicksat-2 cubesat mothership. It's job is to depoly Sprites, which looks kind  of like this:
+Main PCB driving the Kicksat-2 cubesat mothership. Its job is to depoly Sprites, which looks kind  of like this:
 <img src="https://github.com/kicksat/mainboard/blob/master/cam/deployment.gif">
 
 Benchtop development hardware looks like this:
