@@ -18654,7 +18654,7 @@ Validate SPI pinout of SAMD21</text>
 <instance part="SUPPLY9" gate="G$1" x="220.98" y="152.4"/>
 <instance part="R4" gate="G$1" x="127" y="88.9" smashed="yes">
 <attribute name="NAME" x="120.65" y="87.8586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="120.65" y="85.598" size="1.778" layer="96"/>
+<attribute name="VALUE" x="120.65" y="90.678" size="1.778" layer="96"/>
 </instance>
 <instance part="C11" gate="G$1" x="175.26" y="144.78"/>
 <instance part="GND30" gate="1" x="15.24" y="137.16"/>
@@ -18921,7 +18921,12 @@ Validate SPI pinout of SAMD21</text>
 <pinref part="SUPPLY15" gate="G$1" pin="3.3V"/>
 <wire x1="81.28" y1="22.86" x2="81.28" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="CS"/>
-<wire x1="66.04" y1="22.86" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="22.86" x2="68.58" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="SA0/MISO"/>
+<wire x1="68.58" y1="22.86" x2="81.28" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="25.4" x2="68.58" y2="22.86" width="0.1524" layer="91"/>
+<junction x="68.58" y="22.86"/>
 </segment>
 </net>
 <net name="I2C_SCL" class="0">
